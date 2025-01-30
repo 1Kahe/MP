@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro meu Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <div class="wrapper">
+          <input type="checkbox" id="ck1" onClick="check()"/>
+          <label for="ck1">Eu</label>
+          <input type="checkbox" id="ck2" onClick="check()"/>
+          <label for="ck2">Te</label>
+          <input type="checkbox" id="ck3" onClick="check()"/>
+          <label for="ck3">Amo</label>
+          <span>(Clica nas palavrinhas)</span>
+        </div>
+        </form>
+
+        <script>
+
+            function check() {
+            if ( document.forms[0].elements[0].checked == true && document.forms[0].elements[1].checked == true && document.forms[0].elements[2].checked == true ) {
+                if ( ! $('.wrapper').hasClass('throb')) {
+                   
+                    $('.wrapper').addClass('throb');
+                } 
+            } else {
+                if ($('.wrapper').hasClass('throb')) {
+                    
+                    $('.wrapper').removeClass('throb');
+                }
+            }
+            }
+        </script>
+</body>
+</html>
